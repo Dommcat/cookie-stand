@@ -38,20 +38,6 @@ function Store (storeCity, minCust, maxCust, avgCookieBought){
 // console.log (newStore)
 // newStore.render();
 
-// ********** EXECUTABLE CODE ****************
-
-let Seattle = new Store ('Seattle', '23', '65', '6.3');
-let Tokyo = new Store ('Tokyo', '3', '24', '1.2');
-let Dubai = new Store ('Dubai', '11', '38', '3.7');
-let Paris = new Store ('Paris', '20', '38', '2.3');
-let Lima = new Store ('Lima', '2', '16', '4.6');
-
-stores.push(Seattle)[new Store];
-stores.push(Tokyo)[new Store];
-stores.push(Dubai)[new Store];
-stores.push(Paris)[new Store];
-stores.push(Lima)[new Store];
-
 
 // ************** PROTOTYPE METHODS *************
 
@@ -64,6 +50,29 @@ Store.prototype.createcookiesBought = function(){
   // console.log (this.cookiesBought);
 }
 
+
+//****************TABLE FUNCTIONS****************** */
+function tableHeader (){
+  let table = document.getElementById('SalesTable')
+  let tr = document.createElement('tr')
+  table.appendChild(tr)
+  let thead = document.createElement('thead')
+  tr.appendChild(thead)
+for (let i=0;i <hours.length;i++){
+  let th = document.createElement('th')
+  th.textContent = hours[i]
+  tr.appendChild(th)
+}
+let th = document.createElement('th')
+th.textContent = 'Daily Totals'
+tr.appendChild(th)
+
+}
+
+
+
+/****************RENDER FUNCTION****************** */
+
 Store.prototype.render = function () {
   console.log("Here")
   this.createcookiesBought();
@@ -71,6 +80,7 @@ Store.prototype.render = function () {
   console.log(table)
   let tr = document.createElement('tr')
   let td = document.createElement('td')
+  table.appendChild(tr)
   td.textContent = this.storeCity
   tr.appendChild(td)
   for (let i = 0; i < hours.length; i++) {
@@ -83,8 +93,13 @@ Store.prototype.render = function () {
 }
 
 // Seattle.render();
-function renderAll(){}
-renderAll();
+function renderAll(){
+
+  for (let i = 0; i < stores.length; i++) {
+    stores[i].render();
+  }
+}
+
 
 // TODO: Replace the lists of your data for each store and build a single table of data instead. It should look similar to the following: Display each stores data in a table format similar to what is below. Break each column by the hour and complete each row with a “Daily Location Total”.
 
@@ -92,8 +107,24 @@ renderAll();
 
 
 
+// ********** EXECUTABLE CODE ****************
+
+let Seattle = new Store ('Seattle', '23', '65', '6.3');
+let Tokyo = new Store ('Tokyo', '3', '24', '1.2');
+let Dubai = new Store ('Dubai', '11', '38', '3.7');
+let Paris = new Store ('Paris', '20', '38', '2.3');
+let Lima = new Store ('Lima', '2', '16', '4.6');
+
+stores.push(Seattle);
+stores.push(Tokyo);
+stores.push(Dubai);
+stores.push(Paris);
+stores.push(Lima);
 
 
+console.log(stores)
+tableHeader();
+renderAll();
 
 
 
