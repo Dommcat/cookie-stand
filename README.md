@@ -1,5 +1,5 @@
 # cookie-stand
 
-# 201 Lab 6
+# 201 Lab 8
 
 # Author:Dominick Martin

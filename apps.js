@@ -38,7 +38,6 @@ function Store (storeCity, minCust, maxCust, avgCookieBought){
 // console.log (newStore)
 // newStore.render();
 
-
 // ************** PROTOTYPE METHODS *************
 
 Store.prototype.createcookiesBought = function(){
@@ -49,7 +48,6 @@ Store.prototype.createcookiesBought = function(){
   }
   // console.log (this.cookiesBought);
 }
-
 
 //****************TABLE FUNCTIONS****************** */
 function tableHeader (){

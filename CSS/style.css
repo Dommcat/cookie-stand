@@ -2,6 +2,16 @@
 border: 1px black solid
 }
 
+header{
+  color: salmon;
+}
+
+address {
+  display: block;
+  font-style: italic;
+}
+
+
 
 
 /* body {
@@ -30,6 +40,12 @@ main>h2 {
   margin: auto;
   margin-bottom: 10px;
 }
+
+address {
+  display: block;
+  font-style: italic;
+}
+
 
 section {
   width: 75%;
