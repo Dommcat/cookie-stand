@@ -1,28 +1,38 @@
 // Cookie-Store
-// * name: 'Seattle',
-// * minCust: 23,
-// * maxCust: 65,
-// * avgCookieBought: 6.3,
-// * cookiesBought: [],
+// * name: 
+// * minCust: 
+// * maxCust: 
+// * avgCookieBought: 
+// * cookiesBought:
 
 // ************ GLOBALS ******************
-// HELPFUL FOR YOUR LAB!!
+
  let hours = ['6am', '7am', '8am','9am','10am','11am','12pm','1pm','2pm','3pm','4pm','5pm','6pm', '7pm'];
 
  let stores = []; 
 
+
+ // ************ GLOBALS ******************
+
+// for let i <hours.lenth{
+
+//   for let = i<stores.lenth
+
+
 // ************ DOM WINDOWS **************
 // STEP 1: WINDOW INTO THE DOM
+
 let seattlelist=document.getElementById ('SeattleList');
 
+// ************ STEP ONE: Listen Element **************
+
+let myForm =document.getElementById('CookieStand-Form');
 
 // *********** HELPER FUNCTIONS / UTILITES ************
 function randomCustomer(min,max){
   // got from MDN docs
   return Math.floor(Math.random() * (max - min + 1) + min);
 }
-
-// TODO:Replace all of your object literals for the salmon cookie stand with a single constructor function that, when called with the ‘new’ keyword, it creates a new instance.
 
 // ************** CONSTRUCTOR FUNCTION *************
 
@@ -35,9 +45,6 @@ function Store (storeCity, minCust, maxCust, avgCookieBought){
   this.total = 0;
 }
 
-// console.log (newStore)
-// newStore.render();
-
 // ************** PROTOTYPE METHODS *************
 
 Store.prototype.createcookiesBought = function(){
@@ -46,10 +53,11 @@ Store.prototype.createcookiesBought = function(){
     console.log(cookiesNeeded)
     this.cookiesBought.push(cookiesNeeded);
   }
-  // console.log (this.cookiesBought);
+
 }
 
 //****************TABLE FUNCTIONS****************** */
+
 function tableHeader (){
   let table = document.getElementById('SalesTable')
   let tr = document.createElement('tr')
@@ -66,8 +74,6 @@ th.textContent = 'Daily Totals'
 tr.appendChild(th)
 
 }
-
-
 
 /****************RENDER FUNCTION****************** */
 
@@ -90,7 +96,6 @@ Store.prototype.render = function () {
   table.appendChild(tr)
 }
 
-// Seattle.render();
 function renderAll(){
 
   for (let i = 0; i < stores.length; i++) {
@@ -98,10 +103,16 @@ function renderAll(){
   }
 }
 
+// ********** STEP THREE: DEFINE OUR EVENT HANDLER ****************
 
-// TODO: Replace the lists of your data for each store and build a single table of data instead. It should look similar to the following: Display each stores data in a table format similar to what is below. Break each column by the hour and complete each row with a “Daily Location Total”.
+function handleSubmit(event){
+  event.preventDefault();
+  let storeCity = event.target.storeCity.value;
+  let minCust = event.target.minCust.value;
+  let maxCust = event.target.maxCust.value;
+  let avgCookieBought = event.target.avgCookieBought.value;
+}
 
-// TODO Each cookie stand location should have a separate render() method that creates and appends its row to the table The header row and footer row are each created in their own stand-alone function NOTE: Please use a header cell for both the header row ( containing store hours ), and the footer row ( hourly and grand totals across all stores ).
 
 
 
@@ -119,10 +130,33 @@ stores.push(Dubai);
 stores.push(Paris);
 stores.push(Lima);
 
-
 console.log(stores)
 tableHeader();
 renderAll();
+
+// ********** STEP TWO: ADD EVENT LISTENER ****************
+
+myForm.addEventListener('submit',handleSubmit);
+
+
+
+
+//TODO: GRAB INFO OUT OF THE FORM 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

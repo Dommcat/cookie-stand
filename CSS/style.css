@@ -1,15 +1,57 @@
-#SalesTable *{
-border: 1px black solid
+#SalesTable,
+th,
+tr,
+td {
+  border: 1px solid black;
+  text-align: center;
+  width: auto;
+  font-size: medium;
+  margin: auto;
+  width: fit-content;
+  font-family: 'Archivo', sans-serif;
+  background-color;
+  border: 1px double #020005;
+  padding: 8px;
 }
 
-header{
-  color: salmon;
+
+
+
+h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.75em;
+  width: max-content;
+  padding: 30px;
+  margin: auto;
+  margin-bottom: 10px;
 }
 
-address {
-  display: block;
-  font-style: italic;
+
+legend {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.75em;
+  width: max-content;
+  padding: 30px;
+  margin: left;
+  margin-bottom: 10px;
 }
+
+
+body {
+  background-color: #b4bec8;
+}
+
+header {
+  background-color: #797d80;
+  height: 100px;
+}
+
+
+
+
+
+
+
 
 
 
