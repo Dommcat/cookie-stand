@@ -1,23 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 
-
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <title>Salmon Cookie Sales</title>
+
+  <!-- <title>Salmon Cookie Sales</title> -->
 </head>
 
 <body>
-  <h2><a href="index.html">Back to Store Front </a></h2>
-  <table id="SalesTable">Sales Table</table>
+  <h2><a href="index.html">Index - Back to Store Front </a></h2>
+  <table id="SalesTable"></table>
 
   <script src="./apps.js"></script>
   <link rel="stylesheet" href="CSS/reset.css">
   <link rel="stylesheet" href="CSS/style.css">
-</body>
 
 <main>
 
@@ -25,34 +23,30 @@
 
   <h2>New Cookie Stand Information</h2>
   <section id="CookieStand-Info"></section>
+
+
   <form id="CookieStand-Form">
     <fieldset>
-      <legend>Basic Sales Information</legend>
+      <legend>Cookie Form</legend>
 
-      <label for="storeCity">Store City</label>
+      <label for="storeCity">Name</label>
       <input for="text" id="storeCity" name="storeCity"></input>
 
-      <label for="minCust">minCust</label>
+      <label for="minCust">Min Customer</label>
       <input for="text" id="minCust" name="minCust"></input>
 
-      <label for="maxCust">maxCust</label>
+      <label for="maxCust">Max Customer</label>
       <input for="text" id="maxCust" name="maxCust"></input>
 
-      <label for="avgCookieBought">avgCookieBought</label>
+      <label for="avgCookieBought">Average</label>
       <input for="text" id="avgCookieBought" name="avgCookieBought"></input>
-
-      <!-- <label for="cookiesBought"></label>
-    <input for="text"></input> -->
-
-      <!-- <label for="total"></label>
-    <input for="text"></input> -->
 
     </fieldset>
     <button type="submit">Submit</button>
   </form>
 
   <!-- <fieldset>Sales Contact Information</fieldset> -->
-
+</body>
 </main>
 
 </html>
